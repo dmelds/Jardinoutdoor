@@ -3,297 +3,155 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jardín Outdoor — Gear for the Coffee Mountains</title>
+  <title>Jardín Outdoor | Outdoor Gear, Rentals, and Adventures in Jardín</title>
   <meta
     name="description"
-    content="Outdoor gear & sporting goods in Jardín, Antioquia. Hiking, cycling, trail essentials, rentals, and local advice."
+    content="Explore outdoor gear, rentals, and adventures in Jardín, Antioquia. Discover paragliding, bird watching, hiking, and mountain essentials."
   />
-
-  <style>
-    :root {
-      --bg: #0b0f14;
-      --card: #101826;
-      --muted: #9db0c8;
-      --text: #e7eef8;
-      --accent: #7dd3fc;
-      --accent2: #a7f3d0;
-      --border: rgba(231, 238, 248, 0.12);
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
-      --radius: 18px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: radial-gradient(1200px 700px at 25% -10%, rgba(125, 211, 252, 0.25), transparent 60%),
-        radial-gradient(900px 600px at 90% 0%, rgba(167, 243, 208, 0.18), transparent 55%),
-        linear-gradient(180deg, #070a0f, var(--bg));
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height: 1.5;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-      background: rgba(11, 15, 20, 0.72);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-    }
-
-    .logo {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(167, 243, 208, 0.85));
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 14px;
-      color: var(--muted);
-      flex-wrap: wrap;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .btn {
-      display: inline-block;
-      border: 1px solid var(--border);
-      background: rgba(231, 238, 248, 0.06);
-      color: var(--text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .btn.primary {
-      border-color: rgba(125, 211, 252, 0.35);
-      background: linear-gradient(135deg, rgba(125, 211, 252, 0.25), rgba(167, 243, 208, 0.18));
-    }
-
-    .hero-banner {
-      background: url("images/Jardin-mountains.jpeg") center/cover no-repeat;
-      min-height: 420px;
-      display: flex;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    .hero-content {
-      max-width: 650px;
-      background: rgba(16, 24, 38, 0.55);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-
-    h1 {
-      font-size: 42px;
-      margin: 0 0 12px;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin: 0 0 18px;
-    }
-
-    h3 {
-      margin: 10px 0 8px;
-    }
-
-    p {
-      color: var(--muted);
-      margin: 0 0 12px;
-    }
-
-    .section,
-    .activities {
-      padding: 40px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .product {
-      background: rgba(16, 24, 38, 0.7);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    .product img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .product:hover img {
-      transform: scale(1.05);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    @media (max-width: 800px) {
-      h1 {
-        font-size: 32px;
-      }
-
-      .hero-banner {
-        min-height: 360px;
-        padding: 40px 16px;
-      }
-
-      .hero-content {
-        padding: 22px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <div class="logo"></div>
-        Jardín Outdoor
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">Jardín Outdoor</a>
       </div>
 
-      <nav class="nav-links">
-        <a href="#">Shop</a>
-        <a href="#">Rentals</a>
-        <a href="#activities">Trails</a>
-        <a href="#">Contact</a>
+      <nav>
+        <a href="#gear">Gear</a>
+        <a href="#activities">Activities</a>
+        <a href="#rentals">Rentals</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <a class="btn primary" href="#">Visit Store</a>
     </div>
   </header>
 
-  <section class="hero-banner">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Adventure in Jardín, Colombia</h1>
+  <main>
+    <section class="hero" style="background-image: url('images/Jardin-mountains.jpeg');">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Outdoor Adventure in Antioquia</p>
+          <h1>Adventure Starts in Jardín</h1>
+          <p>
+            Discover mountain activities, scenic experiences, and outdoor gear in one of
+            Colombia’s most beautiful towns. From paragliding and bird watching to trail
+            essentials and rentals, Jardín Outdoor helps you explore more.
+          </p>
+          <a href="#activities" class="btn primary">Explore Activities</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gear">
+      <div class="container">
+        <h2>Popular Gear</h2>
+        <div class="grid">
+          <div class="card">
+            <img loading="lazy" decoding="async" src="images/Backpack.jpeg" alt="Hiking backpack">
+            <h3>Hiking Backpacks</h3>
+            <p>Lightweight and durable packs for mountain trails, day trips, and local exploring.</p>
+          </div>
+
+          <div class="card">
+            <img loading="lazy" decoding="async" src="images/Trailshoes.jpeg" alt="Trail shoes">
+            <h3>Trail Shoes</h3>
+            <p>Grip, comfort, and support for uneven terrain around Jardín and the surrounding hills.</p>
+          </div>
+
+          <div class="card">
+            <img loading="lazy" decoding="async" src="images/Cyclinghelmet.jpeg" alt="Cycling helmet">
+            <h3>Cycling Helmets</h3>
+            <p>Ride more confidently on mountain roads and outdoor routes with the right protection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="activities">
+      <div class="container">
+        <h2>Outdoor Activities in Jardín</h2>
+        <div class="grid">
+          <a href="paragliding-tours.html" class="product">
+            <img loading="lazy" decoding="async" src="images/Paragliding.jpeg" alt="Paragliding in Jardín">
+            <h3>Paragliding Tours</h3>
+            <p>Experience Jardín from the sky with a scenic mountain adventure above the Andes.</p>
+          </a>
+
+          <div class="product">
+            <img loading="lazy" decoding="async" src="images/Birdwatching.jpeg" alt="Bird watching in Jardín">
+            <h3>Bird Watching</h3>
+            <p>Explore the cloud forests and discover the rich birdlife that makes this region special.</p>
+          </div>
+
+          <div class="product">
+            <img loading="lazy" decoding="async" src="images/Jardin-mountains.jpeg" alt="Hiking in Jardín">
+            <h3>Hiking Trails</h3>
+            <p>Find scenic walks and outdoor routes that let you experience Jardín beyond the town center.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rentals">
+      <div class="container split">
+        <div>
+          <h2>Rentals for the Day</h2>
+          <p>
+            Need gear for a short trip or a full day outdoors? Rentals can make it easier to
+            explore Jardín without bringing everything with you.
+          </p>
+          <p>
+            Bikes, packs, and outdoor essentials can help visitors enjoy the mountains, trails,
+            and scenic roads around town.
+          </p>
+        </div>
+
+        <div class="note-box">
+          <h3>Popular Rental Ideas</h3>
+          <ul>
+            <li>Mountain bikes</li>
+            <li>Day packs</li>
+            <li>Outdoor basics</li>
+            <li>Trail-friendly gear</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="about">
+      <div class="container narrow">
+        <h2>Why Jardín Outdoor</h2>
         <p>
-          Discover hiking trails, paragliding, bird watching, and outdoor gear
-          in one of Colombia’s most beautiful mountain towns.
+          Jardín Outdoor is built to highlight outdoor experiences in and around Jardín, Antioquia.
+          The goal is simple: help visitors discover what to do, what to bring, and how to enjoy
+          the mountains with a little more confidence.
         </p>
-        <a class="btn primary" href="#activities">Explore Activities</a>
+        <p>
+          Whether you are here for a weekend or a longer stay, this is a starting point for
+          adventure, gear, and local inspiration.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Popular Gear</h2>
-      <div class="grid">
-        <div class="product">
-          <img loading="lazy" decoding="async" src="images/Backpack.jpeg" alt="Hiking Backpack" />
-          <strong>Hiking Backpack</strong>
-          <p>Lightweight and durable for mountain trails.</p>
-        </div>
-
-        <div class="product">
-          <img loading="lazy" decoding="async" src="images/Trailshoes.jpeg" alt="Trail Shoes" />
-          <strong>Trail Shoes</strong>
-          <p>Grip and comfort for uneven terrain.</p>
-        </div>
-
-        <div class="product">
-          <img loading="lazy" decoding="async" src="images/Cyclinghelmet.jpeg" alt="Cycling Helmet" />
-          <strong>Cycling Helmet</strong>
-          <p>Stay safe on mountain rides.</p>
+    <section class="section">
+      <div class="container">
+        <div class="card" style="text-align: center;">
+          <h2>Start with Paragliding</h2>
+          <p>
+            Looking for a signature experience in Jardín? Begin with one of the most memorable
+            activities in the region.
+          </p>
+          <a href="paragliding-tours.html" class="btn primary">View Paragliding Tours</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="activities" id="activities">
-    <div class="container">
-      <h2>Outdoor Activities in Jardín</h2>
+  <footer>
+    Jardín Outdoor © 2026 — Built for exploration
+  </footer>
 
-      <div class="grid">
-  <a href="paragliding-tours.html" class="product">
-    <img loading="lazy" decoding="async" src="images/Paragliding.jpeg" alt="Paragliding in Jardín">
-    <h3>Paragliding</h3>
-    <p>
-      Experience Jardín from the sky with a tandem paragliding flight over
-      the Andes mountains.
-    </p>
-  </a>
-</div>
-
-        <div class="product">
-          <img loading="lazy" decoding="async" src="images/Birdwatching.jpeg" alt="Bird watching in Jardín" />
-          <h3>Bird Watching</h3>
-          <p>Explore the rich birdlife of Jardín’s cloud forests.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Rentals</h2>
-      <p>Need gear for a day? Rent bikes, backpacks, and essentials.</p>
-    </div>
-  </section>
-
-  <footer>Jardín Outdoor © 2026 — Built for exploration</footer>
 </body>
 </html>
