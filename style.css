@@ -332,4 +332,11 @@ textarea:focus {
   outline: none;
   border-color: rgba(125, 211, 252, 0.5);
 }
+  .narrow .card h2 {
+  margin-top: 28px;
+}
+
+.narrow .card h2:first-child {
+  margin-top: 0;
+}
 }
