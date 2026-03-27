@@ -61,15 +61,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  min-height: 78px;
-  flex-wrap: wrap;
+  gap: 28px;
+  min-height: 82px;
+  flex-wrap: nowrap;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 .logo a {
@@ -80,7 +80,7 @@ header {
 
 .logo img {
   display: block;
-  height: 52px;
+  height: 58px;
   width: auto;
   max-width: none;
 }
@@ -88,8 +88,9 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 24px;
+  flex: 1;
 }
 
 nav a {
@@ -426,12 +427,27 @@ footer {
 
 @media (max-width: 820px) {
   .nav {
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    min-height: auto;
+    padding: 12px 0;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 46px;
   }
 
   nav {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    width: 100%;
   }
 
   .hero {
@@ -461,9 +477,5 @@ footer {
   .contact-card,
   .form-card {
     padding: 22px;
-  }
-
-  .logo img {
-    height: 44px;
   }
 }
