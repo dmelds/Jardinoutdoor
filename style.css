@@ -570,5 +570,12 @@ input[type="submit"] {
 .language-switch span {
   color: #5f6f82;
 }
+  @media (max-width: 820px) {
+  .language-switch {
+    width: 100%;
+    justify-content: center;
+    margin-top: 6px;
+  }
+}
   
 }
