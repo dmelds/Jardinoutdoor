@@ -222,6 +222,34 @@
       </p>
     </div>
   </footer>
+  <script>
+  const whatsappInput = document.getElementById('whatsapp');
+
+  function lockPlusPosition() {
+    if (!whatsappInput.value.startsWith('+')) {
+      whatsappInput.value = '+' + whatsappInput.value.replace(/\+/g, '').trimStart();
+    }
+    if (whatsappInput.selectionStart < 1) {
+      whatsappInput.setSelectionRange(1, 1);
+    }
+  }
+
+  whatsappInput.addEventListener('focus', lockPlusPosition);
+  whatsappInput.addEventListener('click', lockPlusPosition);
+  whatsappInput.addEventListener('mouseup', lockPlusPosition);
+  whatsappInput.addEventListener('touchend', lockPlusPosition);
+
+  whatsappInput.addEventListener('keydown', (event) => {
+    if (
+      whatsappInput.selectionStart <= 1 &&
+      (event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft')
+    ) {
+      event.preventDefault();
+    }
+  });
+
+  whatsappInput.addEventListener('input', lockPlusPosition);
+</script>
 
 </body>
 </html>
