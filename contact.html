@@ -21,6 +21,12 @@
         </a>
       </div>
 
+      <div class="language-switch">
+        <a href="contact.html" lang="en">EN</a>
+        <span>|</span>
+        <a href="es/contact.html" lang="es">ES</a>
+      </div>
+
       <nav>
         <a href="index.html#activities">Tours</a>
         <a href="index.html#rentals">Rentals</a>
@@ -50,12 +56,12 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="contact-form">
       <div class="container contact-grid">
         <div class="contact-card">
           <p class="eyebrow">Contact Information</p>
           <h2>How to Reach Us</h2>
-          <p>Use the contact details below for general questions, outdoor planning, and local activity information.</p>
+          <p>Use the details below for general questions, outdoor planning, and local activity information.</p>
 
           <h3>Location</h3>
           <p>Jardín, Antioquia, Colombia</p>
@@ -64,61 +70,61 @@
           <p>Daily by inquiry</p>
         </div>
 
-        <section class="section alt" id="contact">
-  <div class="container narrow">
-    <div class="section-heading">
-      <p class="eyebrow">Contact</p>
-      <h2>Check Availability</h2>
-    </div>
+        <div class="form-card">
+          <p class="eyebrow">Contact</p>
+          <h2>Send a Message</h2>
 
-    <p>
-      Want to make paragliding part of your time in Jardín? Send a message
-      and ask about current availability.
-    </p>
+          <p>
+            Want to ask about tours, rentals, or outdoor experiences in Jardín?
+            Send a message and we’ll help guide you.
+          </p>
 
-    <p class="site-disclaimer">
-      Messages sent through Jardín Outdoor are for general information and
-      inquiry routing. Flight operation and final booking arrangements are
-      handled by the independent provider.
-    </p>
+          <p class="site-disclaimer">
+            Messages sent through Jardín Outdoor are for general information and
+            inquiry routing. Final scheduling, pricing, and booking arrangements
+            are handled by the independent provider when applicable.
+          </p>
 
-    <div class="form-card">
-      <form name="paragliding-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="paragliding-inquiry" />
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-        </p>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
 
-        <p>
-          <label for="whatsapp">WhatsApp Number with Country Code</label>
-          <input
-            type="tel"
-            id="whatsapp"
-            name="whatsapp"
-            value="+"
-            placeholder="+ country code and number"
-            required
-          />
-        </p>
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
 
-        <p>
-          <label for="email">Email (optional)</label>
-          <input type="email" id="email" name="email" />
-        </p>
+            <p>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </p>
 
-        <p>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </p>
+            <p>
+              <label for="whatsapp">WhatsApp Number with Country Code</label>
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                value="+"
+                placeholder="+ country code and number"
+                required
+              />
+            </p>
 
-        <button type="submit">Send Inquiry</button>
-      </form>
-    </div>
-  </div>
-</section>
+            <p>
+              <label for="email">Email (optional)</label>
+              <input type="email" id="email" name="email" />
+            </p>
+
+            <p>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </p>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section alt">
       <div class="container narrow">
         <div class="cta-card">
@@ -144,6 +150,35 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    const whatsappInput = document.getElementById('whatsapp');
+
+    function lockPlusPosition() {
+      if (!whatsappInput.value.startsWith('+')) {
+        whatsappInput.value = '+' + whatsappInput.value.replace(/\+/g, '').trimStart();
+      }
+      if (whatsappInput.selectionStart < 1) {
+        whatsappInput.setSelectionRange(1, 1);
+      }
+    }
+
+    whatsappInput.addEventListener('focus', lockPlusPosition);
+    whatsappInput.addEventListener('click', lockPlusPosition);
+    whatsappInput.addEventListener('mouseup', lockPlusPosition);
+    whatsappInput.addEventListener('touchend', lockPlusPosition);
+
+    whatsappInput.addEventListener('keydown', (event) => {
+      if (
+        whatsappInput.selectionStart <= 1 &&
+        (event.key === 'Backspace' || event.key === 'Delete' || event.key === 'ArrowLeft')
+      ) {
+        event.preventDefault();
+      }
+    });
+
+    whatsappInput.addEventListener('input', lockPlusPosition);
+  </script>
 
 </body>
 </html>
