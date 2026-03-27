@@ -19,9 +19,9 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 a {
@@ -36,6 +36,7 @@ a:hover {
 /* Layout */
 
 .container {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
@@ -58,8 +59,8 @@ header {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   min-height: 72px;
   flex-wrap: wrap;
@@ -74,9 +75,9 @@ header {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 18px;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 nav a {
@@ -105,7 +106,7 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(11, 15, 20, 0.56),
+    rgba(11, 15, 20, 0.58),
     rgba(11, 15, 20, 0.82)
   );
 }
@@ -187,14 +188,24 @@ h3 {
 }
 
 p {
-  color: #b9c8d9;
   margin: 0 0 16px;
+  color: #b9c8d9;
 }
 
 .hero p {
-  color: #d7e2f0;
   max-width: 650px;
+  color: #d7e2f0;
   font-size: 1.05rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #b9c8d9;
+}
+
+li {
+  margin-bottom: 10px;
 }
 
 /* Sections */
@@ -211,7 +222,7 @@ p {
   margin-bottom: 26px;
 }
 
-/* Grids and cards */
+/* Cards and grids */
 
 .grid {
   display: grid;
@@ -220,12 +231,21 @@ p {
 }
 
 .card,
-.cta-card {
+.cta-card,
+.contact-card,
+.form-card,
+.note-box {
   background: rgba(16, 24, 38, 0.9);
   border: 1px solid rgba(231, 238, 248, 0.12);
   border-radius: 18px;
-  padding: 22px;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+}
+
+.card,
+.cta-card,
+.contact-card,
+.form-card {
+  padding: 24px;
 }
 
 .card img {
@@ -244,9 +264,6 @@ p {
 }
 
 .note-box {
-  background: rgba(125, 211, 252, 0.08);
-  border: 1px solid rgba(125, 211, 252, 0.18);
-  border-radius: 16px;
   padding: 20px;
 }
 
@@ -254,33 +271,58 @@ p {
   margin-bottom: 10px;
 }
 
-ul {
-  margin: 0;
-  padding-left: 20px;
-  color: #b9c8d9;
+/* Contact layout */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  align-items: start;
 }
 
-li {
-  margin-bottom: 10px;
+.contact-card h3 {
+  margin-top: 24px;
+}
+
+.contact-card h3:first-of-type {
+  margin-top: 0;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-card p {
+  margin: 0;
 }
 
 /* Buttons */
 
-.btn {
+.btn,
+button,
+input[type="submit"] {
   display: inline-block;
   padding: 12px 18px;
   border-radius: 999px;
   font-weight: 700;
+  font: inherit;
   text-decoration: none;
+  cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
 }
 
-.btn:hover {
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
   transform: translateY(-2px);
   text-decoration: none;
 }
 
-.btn.primary {
+.btn.primary,
+button,
+input[type="submit"] {
   background: linear-gradient(
     135deg,
     rgba(125, 211, 252, 0.28),
@@ -296,27 +338,13 @@ li {
   color: #ffffff;
 }
 
-/* CTA */
-
-.cta-section {
-  padding-top: 40px;
-  padding-bottom: 70px;
-}
-
-.cta-card {
-  text-align: center;
-  padding: 36px 24px;
-}
-
-.cta-actions {
-  justify-content: center;
+.form-card button,
+.form-card input[type="submit"] {
+  width: fit-content;
+  min-width: 160px;
 }
 
 /* Forms */
-
-form p {
-  margin-bottom: 16px;
-}
 
 label {
   display: inline-block;
@@ -347,27 +375,20 @@ textarea:focus {
   border-color: rgba(125, 211, 252, 0.5);
 }
 
-button,
-input[type="submit"] {
-  display: inline-block;
-  padding: 12px 18px;
-  border: 0;
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(125, 211, 252, 0.28),
-    rgba(167, 243, 208, 0.18)
-  );
-  border: 1px solid rgba(125, 211, 252, 0.35);
-  color: #ffffff;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
+/* CTA */
+
+.cta-section {
+  padding-top: 40px;
+  padding-bottom: 70px;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  opacity: 0.92;
+.cta-card {
+  text-align: center;
+  padding: 36px 24px;
+}
+
+.cta-actions {
+  justify-content: center;
 }
 
 /* Article spacing */
@@ -409,9 +430,10 @@ footer {
     min-height: auto;
   }
 
-  .hero-layout {
+  .hero-layout,
+  .split,
+  .contact-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
   }
 
   .hero-side-card {
@@ -422,7 +444,10 @@ footer {
     font-size: 2.2rem;
   }
 
-  .split {
-    grid-template-columns: 1fr;
+  .card,
+  .cta-card,
+  .contact-card,
+  .form-card {
+    padding: 22px;
   }
 }
