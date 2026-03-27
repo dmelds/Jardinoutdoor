@@ -450,4 +450,15 @@ footer {
   .form-card {
     padding: 22px;
   }
+  .logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.logo a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
 }
