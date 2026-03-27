@@ -62,15 +62,27 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: 84px;
+  min-height: 78px;
   flex-wrap: wrap;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .logo a {
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  height: 52px;
+  width: auto;
+  max-width: none;
 }
 
 nav {
@@ -450,15 +462,8 @@ footer {
   .form-card {
     padding: 22px;
   }
-  .logo img {
-  height: 78px;
-  width: auto;
-  display: block;
-}
 
-.logo a {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-}
+  .logo img {
+    height: 44px;
+  }
 }
