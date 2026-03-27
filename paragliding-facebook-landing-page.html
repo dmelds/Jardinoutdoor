@@ -36,15 +36,8 @@
           </p>
 
           <div class="hero-actions">
-            <a
-              href="https://wa.me/573222051946?text=Hi%20I%27m%20interested%20in%20paragliding%20in%20Jard%C3%ADn.%20Can%20you%20tell%20me%20about%20availability%3F"
-              class="btn primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Ask on WhatsApp
-            </a>
-            <a href="#contact" class="btn secondary">Check Availability</a>
+            <a href="#contact" class="btn primary">Check Availability</a>
+            <a href="#contact" class="btn secondary">Ask a Question</a>
           </div>
 
           <p class="hero-meta">
@@ -58,7 +51,7 @@
             <li>Scenic outdoor activity near Jardín</li>
             <li>Mountain weather can change quickly</li>
             <li>Comfortable clothes and closed-toe shoes help</li>
-            <li>WhatsApp is the fastest way to ask about availability</li>
+            <li>Use the form below to request availability</li>
           </ul>
         </div>
       </div>
@@ -161,16 +154,10 @@
             Reach out for general information, availability, and local outdoor
             guidance.
           </p>
+
           <div class="hero-actions cta-actions">
-            <a
-              href="https://wa.me/573222051946?text=Hi%20I%27m%20interested%20in%20paragliding%20in%20Jard%C3%ADn.%20Can%20you%20tell%20me%20about%20availability%3F"
-              class="btn primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Ask on WhatsApp
-            </a>
-            <a href="#contact" class="btn secondary">Contact Jardín Outdoor</a>
+            <a href="#contact" class="btn primary">Check Availability</a>
+            <a href="#contact" class="btn secondary">Ask a Question</a>
           </div>
         </div>
       </div>
@@ -194,7 +181,33 @@
           handled by the independent provider.
         </p>
 
-        <a href="contact.html" class="btn secondary">Use Contact Page</a>
+        <div class="form-card">
+          <form name="paragliding-inquiry" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="paragliding-inquiry" />
+
+            <p>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </p>
+
+            <p>
+              <label for="whatsapp">WhatsApp Phone Number</label>
+              <input type="tel" id="whatsapp" name="whatsapp" required />
+            </p>
+
+            <p>
+              <label for="email">Email (optional)</label>
+              <input type="email" id="email" name="email" />
+            </p>
+
+            <p>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </p>
+
+            <button type="submit">Send Inquiry</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
