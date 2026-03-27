@@ -487,5 +487,68 @@ footer {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+  .form-card {
+  background: rgba(16, 24, 38, 0.9);
+  border: 1px solid rgba(231, 238, 248, 0.12);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-card p {
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(231, 238, 248, 0.14);
+  border-radius: 12px;
+  background: #0f1724;
+  color: #e7eef8;
+  font: inherit;
+}
+
+textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(125, 211, 252, 0.5);
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(125, 211, 252, 0.28),
+    rgba(167, 243, 208, 0.18)
+  );
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  color: #ffffff;
+}
   
 }
