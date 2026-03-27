@@ -1,15 +1,19 @@
+Save this as:
+
+es/contact.html
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Jardín Outdoor</title>
+  <title>Contacto | Jardín Outdoor</title>
   <meta
     name="description"
-    content="Contact Jardín Outdoor for questions about tours, rentals, gear, and outdoor experiences in Jardín, Antioquia."
+    content="Contacta a Jardín Outdoor para preguntas sobre tours, alquileres, equipo y experiencias outdoor en Jardín, Antioquia."
   />
   <script async data-id="101503388" src="//static.getclicky.com/js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
@@ -17,40 +21,40 @@
     <div class="container nav">
       <div class="logo">
         <a href="index.html">
-          <img src="images/Logo-good.png" alt="Jardín Outdoor logo">
+          <img src="../images/Logo-good.png" alt="Logo de Jardín Outdoor">
         </a>
       </div>
 
       <div class="language-switch">
-        <a href="contact.html" lang="en">EN</a>
+        <a href="../contact.html" lang="en">EN</a>
         <span>|</span>
-        <a href="es/contact.html" lang="es">ES</a>
+        <a href="contact.html" lang="es">ES</a>
       </div>
 
       <nav>
-        <a href="index.html#activities">Tours</a>
-        <a href="index.html#rentals">Rentals</a>
-        <a href="index.html#gear">Shop</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html#activities">Tours</a>
+        <a href="../index.html#rentals">Alquileres</a>
+        <a href="../index.html#gear">Tienda</a>
+        <a href="../about.html">Acerca de</a>
+        <a href="contact.html">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" style="background-image: url('images/Jardin-mountains.jpeg');">
+    <section class="hero" style="background-image: url('../images/Jardin-mountains.jpeg');">
       <div class="container">
         <div class="hero-content">
-          <p class="eyebrow">Get in Touch</p>
-          <h1>Contact Jardín Outdoor</h1>
+          <p class="eyebrow">Ponte en contacto</p>
+          <h1>Contacta a Jardín Outdoor</h1>
           <p>
-            Have a question about tours, rentals, or outdoor experiences in Jardín?
-            Send a message and we’ll help point you in the right direction.
+            ¿Tienes una pregunta sobre tours, alquileres o experiencias outdoor en Jardín?
+            Envía un mensaje y te ayudaremos a orientarte.
           </p>
 
           <p class="site-disclaimer">
-            Jardín Outdoor is an independent guide and inquiry platform. We do not
-            directly operate listed tours, rentals, transportation, or activities.
+            Jardín Outdoor es una guía independiente y una plataforma de consultas.
+            No operamos directamente tours, alquileres, transporte o actividades anunciadas.
           </p>
         </div>
       </div>
@@ -59,67 +63,66 @@
     <section class="section" id="contact-form">
       <div class="container contact-grid">
         <div class="contact-card">
-          <p class="eyebrow">Contact Information</p>
-          <h2>How to Reach Us</h2>
-          <p>Use the details below for general questions, outdoor planning, and local activity information.</p>
+          <p class="eyebrow">Información de contacto</p>
+          <h2>Cómo contactarnos</h2>
+          <p>Usa los datos a continuación para preguntas generales, planificación outdoor e información sobre actividades locales.</p>
 
-          <h3>Location</h3>
+          <h3>Ubicación</h3>
           <p>Jardín, Antioquia, Colombia</p>
 
-          <h3>Hours</h3>
-          <p>Daily by inquiry</p>
+          <h3>Horario</h3>
+          <p>Todos los días por consulta</p>
         </div>
 
         <div class="form-card">
-          <p class="eyebrow">Contact</p>
-          <h2>Send a Message</h2>
+          <p class="eyebrow">Contacto</p>
+          <h2>Enviar un mensaje</h2>
 
           <p>
-            Want to ask about tours, rentals, or outdoor experiences in Jardín?
-            Send a message and we’ll help guide you.
+            ¿Quieres preguntar sobre tours, alquileres o experiencias outdoor en Jardín?
+            Envíanos un mensaje y te ayudaremos a orientarte.
           </p>
 
           <p class="site-disclaimer">
-            Messages sent through Jardín Outdoor are for general information and
-            inquiry routing. Final scheduling, pricing, and booking arrangements
-            are handled by the independent provider when applicable.
+            Los mensajes enviados por Jardín Outdoor son para información general y canalización de consultas.
+            La programación final, los precios y las reservas son manejados por el proveedor independiente cuando corresponda.
           </p>
 
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
 
             <p hidden>
-              <label>Don’t fill this out: <input name="bot-field" /></label>
+              <label>No llenes esto: <input name="bot-field" /></label>
             </p>
 
             <p>
-              <label for="name">Name</label>
+              <label for="name">Nombre</label>
               <input type="text" id="name" name="name" required />
             </p>
 
             <p>
-              <label for="whatsapp">WhatsApp Number with Country Code</label>
+              <label for="whatsapp">Número de WhatsApp con código de país</label>
               <input
                 type="tel"
                 id="whatsapp"
                 name="whatsapp"
                 value="+"
-                placeholder="+ country code and number"
+                placeholder="+ código de país y número"
                 required
               />
             </p>
 
             <p>
-              <label for="email">Email (optional)</label>
+              <label for="email">Correo electrónico (opcional)</label>
               <input type="email" id="email" name="email" />
             </p>
 
             <p>
-              <label for="message">Message</label>
+              <label for="message">Mensaje</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </p>
 
-            <button type="submit">Send Message</button>
+            <button type="submit">Enviar mensaje</button>
           </form>
         </div>
       </div>
@@ -128,13 +131,13 @@
     <section class="section alt">
       <div class="container narrow">
         <div class="cta-card">
-          <p class="eyebrow">Popular Question</p>
-          <h2>Looking for Paragliding Tours?</h2>
+          <p class="eyebrow">Pregunta popular</p>
+          <h2>¿Buscas tours de parapente?</h2>
           <p>
-            Start with our paragliding page to explore one of the most memorable
-            outdoor experiences in Jardín.
+            Empieza con nuestra página de parapente para explorar una de las experiencias
+            outdoor más memorables en Jardín.
           </p>
-          <a href="paragliding-tours.html" class="btn primary">View Paragliding Tours</a>
+          <a href="paragliding-tours.html" class="btn primary">Ver tours de parapente</a>
         </div>
       </div>
     </section>
@@ -142,11 +145,11 @@
 
   <footer>
     <div class="container">
-      <p>Jardín Outdoor © 2026 — Built for exploration</p>
+      <p>Jardín Outdoor © 2026 — Hecho para explorar</p>
       <p>
-        <a href="privacy-policy.html">Privacy Policy</a> |
-        <a href="disclaimer.html">Disclaimer</a> |
-        <a href="terms.html">Terms of Use</a>
+        <a href="privacy-policy.html">Política de Privacidad</a> |
+        <a href="disclaimer.html">Aviso legal</a> |
+        <a href="terms.html">Términos de uso</a>
       </p>
     </div>
   </footer>
